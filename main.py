@@ -1,12 +1,16 @@
 import random
 rundor=0#basvärde rundor
+rundval = "Välj antal rundor fighten ska pågå(3-10):"
+
 while rundor<3 or rundor>10:#loop tills rätt antal rundor
-    rundor=input("Välj antal rundor fighten ska pågå(3-10):")
-    if rundor!=int or rundor =="":
+    rundor=input(rundval)
+    if rundor.isdigit == False:
         print ("du kan bara använda dig av siffror")
-        rundor=input("Välj antal rundor fighten ska pågå(3-10):")
-    if rundor<3 or rundor >10:#felkod
+        rundor=input(rundval)
+    elif int(rundor)<3 or int(rundor) >10: #felkod
         print ("rundor är utanför valbart spann")
+    rundor = int(rundor)
+    
     
 
 
